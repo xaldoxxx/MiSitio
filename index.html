@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo a medida | xaldoxxx</title>
+  
+  <!-- Metatags de SEO -->
+  <meta name="description" content="¡Desarrollo a medida.">
+  <meta name="keywords" content="desarrollador autodidacta, manejo de datos, Python, WordPress, desarrollo web, proyectos personales, análisis de datos">
+  <meta name="author" content="xaldoxxx">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Metatags de Open Graph (Facebook) -->
+  <meta property="og:title" content="Portfolio | xaldoxxx">
+  <meta property="og:description" content="¡Desarrollo a medidal.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.xaldoxxx.com.ar/">
+  <meta property="og:image" content="https://www.xaldoxxx.com.ar/imagen.png">
+  
+  <!-- Metatags de Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio | xaldoxxx">
+  <meta name="twitter:description" content="¡Desarrollo a medida.">
+  <meta name="twitter:image" content="https://www.xaldoxxx.com.ar/imagen.png">
+  
+  <!-- Otros metatags -->
+  <meta name="format-detection" content="telephone=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <link href="https://www.xaldoxxx.com.ar/" rel="canonical">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet"> <!-- Archivo de estilos CSS externo -->
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Ícono favicon.ico -->
+
+  <style>
+    body {
+      font-size: 18px;
+    }
+    .container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // Bloquear inspección de código
+    document.oncontextmenu = new Function("return false");
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    };
+    
+
+  // Función para registrar eventos sospechosos
+  function logEvent(eventType, details) {
+    // En lugar de mostrar una alerta, aquí puedes enviar datos a un servidor o servicio de monitoreo
+    // para su posterior análisis y generación de alertas.
+    console.log('Evento sospechoso detectado: ' + eventType);
+    console.log('Detalles: ' + details);
+  }
+
+  // Ejemplo de registro de un evento sospechoso
+
+
+
+    
+    // Ejemplo de registro de un evento sospechoso , estamos rastreando el número de solicitudes realizadas por un visitante en un minuto y comparándolo con un límite.
+    function detectarActividadSospechosa() {
+        // Aquí puedes agregar tu lógica para detectar actividades sospechosas.
+        // Por ejemplo, si notas un patrón de solicitudes inusual, puedes registrar un evento.
+    
+        // Supongamos que deseas verificar si un visitante realiza demasiadas solicitudes en un corto período de tiempo.
+        var maxSolicitudesPorMinuto = 60; // Número máximo de solicitudes por minuto permitido.
+        
+        // Lógica para verificar el número de solicitudes del visitante en un minuto.
+        var solicitudesAnteriores = parseInt(getCookie("solicitudesAnteriores")) || 0;
+        var ahora = new Date().getTime();
+        var tiempoAnterior = parseInt(getCookie("tiempoAnterior")) || ahora;
+    
+        var tiempoTranscurrido = ahora - tiempoAnterior;
+    
+        if (tiempoTranscurrido <= 60000) { // 60000 ms = 1 minuto
+            // Si han pasado menos de 1 minuto desde la última solicitud.
+            if (solicitudesAnteriores >= maxSolicitudesPorMinuto) {
+                // Demasiadas solicitudes en un minuto, esto podría ser sospechoso.
+                var detalles = 'Número inusual de solicitudes en un minuto (' + solicitudesAnteriores + ' solicitudes).';
+                logEvent('Intento de acceso sospechoso', detalles);
+            }
+        } else {
+            // Reiniciar el contador y tiempo si ha pasado más de un minuto.
+            setCookie("solicitudesAnteriores", 1, 1); // Inicializar a 1 solicitud.
+            setCookie("tiempoAnterior", ahora, 1); // Guardar el tiempo actual.
+        }
+    }
+
+
+
+    var detalles = 'Patrón de acceso sospechoso desde una dirección IP.';
+
+    logEvent('Intento de acceso sospechoso', detalles);    
+    
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <div class="container">
+    <h2>Desarrollo a medida...</h2>
+    <h3>algunas zonceras...</h3>
+    <ul>
+        
+        
+      
+                        
+      <li><a href="https://xaldoxxx.pythonanywhere.com" target="_blank">Aprendiendo Flask</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/mido.ipynb" target="_blank">Contrapunto</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/pizzasPrompt.ipynb" target="_blank">Prompts para blog de pizzas</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/apuestas002.ipynb" target="_blank">Script para apuestas Liga Profesional Argentina 2023 versión 0001</a></li>
+      <li><a href="https://pizzas.xaldoxxx.com.ar/" target="_blank">BlogPizza001</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/snscrape.ipynb" target="_blank">Primer proyecto de scraping: mirando Twitter sin usar la API de Twitter</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/codewars.ipynb" target="_blank">Algoritmos Codewars</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/arrays6kyu.ipynb" target="_blank">Arrays 6 kyu</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/mlibre_csv.ipynb" target="_blank">Precios MercadoLibre a DataFrame</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/shodanColab.ipynb" target="_blank">Shodan, ¿jugando sucio?</a></li>
+      <li><a href="https://github.com/xaldoxxx/BlockDeNotas/blob/main/selenium.ipynb" target="_blank">Selenium en Colab versión 2023</a></li>
+      
+      
+      
+      
+      <li><a href="https://xaldoxxx.com.ar/app004" target="_blank">Pyscript</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app005" target="_blank">Pianito</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app006" target="_blank">Maiax001(dibujo)</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app007" target="_blank">Maiax002(sonido-color)</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app008" target="_blank">Maiax003(sonido-arrastra)</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app009" target="_blank">Camara001</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app010" target="_blank">Camara002</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app011" target="_blank">Camara003</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app012" target="_blank">SubirArchivo</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app013" target="_blank">HipotesisMulticolor</a></li>
+
+      <li><a href="https://xaldoxxx.com.ar/app014" target="_blank">Maiax004(burbujas)</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app015" target="_blank">Ana001</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app016" target="_blank">TemplateBlogHTML</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app017" target="_blank">TemplateBlogBootstrap001</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app019" target="_blank">TemplateBlogBootstrap002</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app020" target="_blank">Ana002</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app021" target="_blank">Blue Drag</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app022" target="_blank">Ana003</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app023" target="_blank">Camara004</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app024" target="_blank">Camara005</a></li>
+      
+      <li><a href="https://xaldoxxx.com.ar/app025" target="_blank">TemplateBlogBootstrap003</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app026" target="_blank">EfectoAutovideo001</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app027" target="_blank">EfectoAutovideo002</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app028" target="_blank">Tarot001</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app029" target="_blank">Tarot002</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app030" target="_blank">Tarot003</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app031" target="_blank">Tarot004</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app033" target="_blank">Tarot005</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app034" target="_blank">Generador de recetas de Pizza</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app035" target="_blank">JuegoSimon</a></li>
+      <li><a href="https://xaldoxxx.com.ar/app037" target="_blank">GrabaSonido</a></li>
+
+
+
+
+    </ul>
+  </div>
+
+  <footer class="text-center mt-5">
+    <p>&copy; <a href="https://github.com/xaldoxxx">xaldoxxx</a></p>
+  </footer>
+
+  <button class="toggle-btn" onclick="toggleTheme()" type="button"><img src="toggle-icon.png" alt="Toggle Theme"></button>
+
+  <script src="script.js"></script> <!-- Archivo de script externo -->
+    <script>
+      function toggleTheme() {
+        // Obtener el elemento 'body' para cambiar su estilo de fondo y color de texto
+        var body = document.body;
+    
+        // Obtener el botón de alternancia de tema
+        var toggleButton = document.querySelector(".toggle-btn");
+    
+        // Verificar el estilo actual y alternar al siguiente
+        if (body.classList.contains("dark-theme")) {
+          // Cambiar a tema claro
+          body.classList.remove("dark-theme");
+          toggleButton.innerHTML = '<img src="toggle-icon-dark.png" alt="Toggle Theme">';
+        } else {
+          // Cambiar a tema oscuro
+          body.classList.add("dark-theme");
+          toggleButton.innerHTML = '<img src="toggle-icon-light.png" alt="Toggle Theme">';
+        }
+      }
+    </script>
+</body>
+</html>
